@@ -18,7 +18,7 @@ class CustomerList extends Component {
     }
 
     fetchCustomers = () => {
-        axios.get('http://127.0.0.1:5000/customers')
+        axios.get('https://dillon-be-exp.onrender.com/customers')
             .then(response => {
                 this.setState({ customers: response.data });
             })
@@ -29,7 +29,7 @@ class CustomerList extends Component {
     };
 
     deleteCustomer = (id) => {
-        axios.delete(`http://127.0.0.1:5000/customers/${id}`)
+        axios.delete(`https://dillon-be-exp.onrender.com/customers/${id}`)
             .then(() => {
                 this.fetchCustomers(); // Refresh the list after deletion
             })
@@ -40,7 +40,7 @@ class CustomerList extends Component {
     };
 
     fetchCustomer = (id) => {
-        axios.get(`http://127.0.0.1:5000/customers${id}`)
+        axios.get(`https://dillon-be-exp.onrender.com/customers${id}`)
         .then(response => {
             this.setState({customer: response.data})
         })

@@ -18,7 +18,7 @@ class ProductsList extends Component {
     }
 
     fetchProducts = () => {
-        axios.get('http://127.0.0.1:5000/products')
+        axios.get('https://dillon-be-exp.onrender.com/products')
         .then(response => {
             this.setState({ product: response.data });
         })
@@ -29,7 +29,7 @@ class ProductsList extends Component {
     };
 
     deleteProduct = (productId) => {
-        axios.delete(`http://127.0.0.1:5000/products/${productId}`)
+        axios.delete(`https://dillon-be-exp.onrender.com/products/${productId}`)
             .then(() => {
                 this.fetchProducts();
             })

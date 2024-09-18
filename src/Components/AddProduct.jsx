@@ -30,7 +30,7 @@ class AddProduct extends Component {
                 product_description: this.state.product_description.trim()
             };
 
-            axios.post('http://127.0.0.1:5000/products', productData)
+            axios.post('https://dillon-be-exp.onrender.com/products', productData)
                 .then(() => {
                     this.setState({
                         showSuccessModal: true,
@@ -56,8 +56,8 @@ class AddProduct extends Component {
     };
 
     handleChange = (event) => {
-        const { product_name, value } = event.target;
-        this.setState({ [product_name]: value });
+        const { name, value } = event.target;
+        this.setState({ [name]: value });
     };
 
     closeModal = () => {

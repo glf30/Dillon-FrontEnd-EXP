@@ -30,7 +30,7 @@ class AddCustomer extends Component {
                 phone: this.state.phone.trim()
             };
 
-            axios.post('http://127.0.0.1:5000/customers', customerData)
+            axios.post('https://dillon-be-exp.onrender.com/customers', customerData)
                 .then(() => {
                     this.setState({
                         showSuccessModal: true,
@@ -56,6 +56,8 @@ class AddCustomer extends Component {
     };
 
     handleChange = (event) => {
+        console.log("TEST")
+        console.log(event.target.value)
         const { name, value } = event.target;
         this.setState({ [name]: value });
     };

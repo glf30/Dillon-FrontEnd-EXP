@@ -33,7 +33,7 @@ class CreateOrder extends Component {
             };
             console.log(orderData);
 
-            axios.post('http://127.0.0.1:5000/orders', orderData)
+            axios.post('https://dillon-be-exp.onrender.com/orders', orderData)
                 .then(() => {
                     this.setState({showSuccessModal: true,
                     isLoading: false    
